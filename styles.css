@@ -24,7 +24,8 @@
 html, body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    
     font-family: "Monorama";
 
     background: url('hero.jpg') no-repeat;
@@ -122,12 +123,20 @@ p.primary {
 
 }
 
-footer {
+/*footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 2em 4em 4em 4em;
     display: flex;
+}*/
+
+footer {
+    bottom: 0;
+    width: 100%;
+    padding: 2em 4em 4em 4em;
+    display: flex;
+    overflow-x: auto;
 }
 
 footer > div {
@@ -157,7 +166,6 @@ footer > div {
 }
 
 .hero-img {
-    position: absolute;
     right: 4em;
     bottom: 35%;
     width: 600px;
@@ -242,15 +250,40 @@ footer > div {
         width: 100%;
     }
 
-    p.intro {
-        display: none;
-    }
-
     .slide-name p {
         font-size: 24px;
     }
 
-    .awards, .agency {
-        display: none;
+}
+
+@media (min-width: 900px) {
+    footer {
+        position: absolute;
     }
+}
+
+@media (max-width: 450px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-buttons {
+        margin-top: 15px;
+    }
+
+    .hero-img {
+        content: none;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide-info {
+        flex-direction: column;
+    }
+
+    
 }
