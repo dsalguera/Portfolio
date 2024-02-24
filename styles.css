@@ -1,8 +1,8 @@
 
 :root {
-    --color-bg: #211951;
-    --color-accent: #836FFF;
-    --color-text: #15F5BA;
+    --color-bg: #0F0F0F;
+    --color-accent: #232D3F;
+    --color-text: #005B41;
 }
 
 @font-face {
